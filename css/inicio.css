@@ -1,0 +1,87 @@
+body {
+  overflow-x: hidden;
+}
+
+.lista-menu li:nth-child(3) {
+  display: none;
+}
+
+.begin-container {
+  grid-template-columns: repeat(3, 30%);
+  justify-content: space-evenly;
+}
+
+.begin-container a {
+  text-decoration: none;
+  color: var(--color-texto-blanco);
+}
+
+.begin-container div {
+  padding: 0.5rem;
+  height: 7vh;
+  text-align: center;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  background-color: var(--color-secundario);
+  transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.begin-container div:hover {
+  background-color: var(--color-secundario-hover);
+  transform: scale(1.05);
+}
+
+.begin-container div img {
+  width: 2.2rem;
+}
+
+.begin-container div img[src="img/estetoscopio.png"] {
+  width: 1.8rem;
+}
+
+.begin-container+div {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.begin-container+div img {
+  width: 20%;
+  height: auto;
+  object-fit: cover;
+  opacity: 0.4;
+}
+
+/*Animacion sacudir*/
+@keyframes shake {
+
+  10%,
+  90% {
+    transform: translate(-2px, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate(3px, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate(-5px, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate(5px, 0);
+  }
+}
+
+.shake:hover {
+  animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate(0, 0);
+}

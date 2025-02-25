@@ -1,0 +1,321 @@
+/*-----------------------Estilos Globales-------------------------*/
+html {
+  font-size: 16px;
+  box-sizing: border-box;
+  opacity: 0.95;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  opacity: 1;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: var(--fuente-global);
+  background-color: var(--bg-body);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.contenedor-grid {
+  margin: 0;
+  padding: 0;
+  min-height: inherit;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 5vh 1fr;
+  grid-template-areas:
+    " header "
+    " main ";
+}
+
+/*-----------------------Estilos de la Cabecera-------------------------*/
+.cabecera {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 17%;
+  background-color: var(--bg-cabecera);
+  transition: margin-left 0.5s ease;
+}
+
+.btn-menu {
+  /*Boton de cerrar y abrir el menu vertical*/
+  font-weight: bold;
+  font-size: 1.75rem;
+  background: none;
+  border: none;
+  margin-top: -0.4rem;
+  margin-left: 0.4rem;
+  cursor: pointer;
+  color: var(--color-texto-blanco);
+  transition: font-size 0.4s ease, color 0.4s ease;
+}
+
+.btn-menu:hover {
+  font-size: 1.9rem;
+  color: var(--color-luna);
+}
+
+.lista-cabecera {
+  max-height: 5vh;
+  text-align: center;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.lista-cabecera li {
+  list-style-type: none;
+  max-height: inherit;
+  font-size: 1.1rem;
+  color: var(--color-texto-blanco);
+  padding-left: 1rem;
+}
+
+.lista-cabecera li:nth-child(2) {
+  max-height: 4vh;
+}
+
+.btn-modo-oscuro,
+/*Botones de modo oscuro y claro*/
+.btn-modo-claro {
+  border: none;
+  padding: 0;
+  background: none;
+  display: flex;
+  align-items: center;
+  width: 4vh;
+  height: 4vh;
+  transition: transform 0.5s ease, fill 0.5s ease;
+}
+
+.btn-modo-oscuro {
+  fill: var(--color-luna);
+}
+
+.btn-modo-claro {
+  fill: var(--color-sol);
+}
+
+.btn-modo-oscuro:hover,
+.btn-modo-claro:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.btn-modo-oscuro:hover {
+  fill: var(--color-luna-hover);
+}
+
+.btn-modo-claro:hover {
+  fill: var(--color-sol-hover);
+}
+
+:root[data-theme="light"] .btn-modo-claro {
+  display: none;
+}
+
+:root[data-theme="dark"] .btn-modo-oscuro {
+  display: none;
+}
+
+.lista-cabecera .btn-cerrar-sesion {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.lista-cabecera .btn-cerrar-sesion:hover {
+  transform: scale(1.10);
+}
+
+.img-salir {
+  width: 4vh;
+  height: 4vh;
+  fill: var(--color-texto-blanco);
+}
+
+.img-salir:hover {
+  fill: var(--color-luna);
+}
+
+.img-usuario {
+  width: 5vh;
+  height: 5vh;
+}
+
+/*-----------------------Estilos del Menu-------------------------*/
+.menu-lateral {
+  grid-area: nav;
+  min-height: 100vh;
+  background-image: url(../img/bg-nav-lateral.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  backdrop-filter: blur(1rem);
+  position: fixed;
+  width: 17%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transition: margin-left 0.5s ease, opacity 0.5s ease, width 0.5s ease;
+}
+
+.cubierta-nav {
+  background-color: var(--bg-menu);
+  min-height: inherit;
+}
+
+.desaparecer {
+  margin-left: -17%;
+  opacity: 0;
+  width: 0;
+  transition: margin-left 0.5s ease, opacity 0.5s ease, width 0.5s ease;
+}
+
+.lista-menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.lista-menu li {
+  display: block;
+  list-style-type: none;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.lista-menu li:first-child {
+  max-height: 5vh;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--fuente-logotipo);
+  color: var(--color-texto-blanco);
+  background-color: var(--color-principal);
+}
+
+.lista-menu li img {
+  max-width: 10rem;
+  padding: 0;
+  margin: 1.2rem 0 0 0;
+  height: auto;
+  object-fit: cover;
+  filter: drop-shadow(0.21rem 0.1rem 1rem var(--color-secundario));
+}
+
+.lista-menu li a {
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+  cursor: pointer;
+  padding: 0.2rem;
+  margin-top: 0.5rem;
+  border-bottom: thin solid var(--color-terciario);
+  color: var(--color-texto-blanco);
+  transition: background-color 0.5s ease, font-size 0.5s ease, border-bottom 0.5s ease;
+}
+
+.lista-menu a:hover {
+  background-color: var(--bg-enlace-menu-hover);
+  font-size: 1.1rem;
+  border-bottom: medium solid var(--color-terciario);
+}
+
+.lista-menu li:nth-child(2) a {
+  border-bottom: none;
+}
+
+.lista-menu li:nth-child(2) a:hover {
+  background-color: transparent;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1.1);
+  }
+
+  50% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulse {
+  animation: pulse 2s linear infinite;
+}
+
+/*-----------------------Estilos del Contenido Principal-------------------------*/
+.contenido-principal {
+  grid-area: main;
+  background-size: cover;
+  margin-left: 17%;
+  transition: margin-left 0.5s ease;
+  background-color: var(--bg-body);
+}
+
+.estirar {
+  margin-left: 0;
+}
+
+.contenedor-contenido-principal {
+  min-height: calc(100vh - 5vh);
+  text-align: left;
+  background-color: transparent;
+  width: 100%;
+  padding: 1.8rem;
+}
+
+.contenedor-contenido-principal h1,
+.contenedor-contenido-principal h2 {
+  font-size: 1.8rem;
+  opacity: 1;
+  grid-column: span 2;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  text-align: center;
+  border-radius: 0.3rem;
+  font-family: var(--fuente-global);
+  color: var(--color-texto-blanco);
+  background-color: var(--color-principal);
+}
+
+.contenedor-contenido-principal h1 svg {
+  width: 2rem;
+  height: auto;
+  float: left;
+  cursor: pointer;
+  margin: 0.4rem;
+  margin-left: 0.7rem;
+  fill: var(--color-texto-blanco);
+  transition: fill 0.5s ease-in-out, transform 0.5s ease;
+}
+
+.contenedor-contenido-principal h1 svg:hover {
+  fill: var(--color-luna);
+  transform: scale(1.2);
+}

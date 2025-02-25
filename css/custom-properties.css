@@ -1,0 +1,75 @@
+/*-----------------------Estilos modo claro-----------------------*/
+:root {
+  --bg-formulario-login: rgba(156, 172, 190, 0.8);
+  --color-secundario-login: rgba(142, 171, 189, 0.9);
+  --color-secundario-login-hover: rgba(169, 208, 231, 0.9);
+  --color-texto-naranja-login: rgba(223, 118, 19, 0.8);
+
+  --bg-body: rgba(226, 238, 221, 0.9);
+  --bg-body-darker: rgba(221, 233, 216, 0.9);
+  --bg-cabecera: rgba(8, 10, 20, 0.836);
+  --bg-menu: rgba(20, 19, 19, 0.8);
+  --bg-enlace-menu-hover: rgba(52, 53, 54, 0.904);
+  --bg-consulta-par: rgba(185, 225, 248, 0.75);
+  --bg-consulta-impar: rgba(140, 188, 243, 0.75);
+
+  --color-texto-blanco: rgba(255, 255, 255, 0.95);
+  --color-texto-negro-05: rgba(0, 0, 0, 0.5);
+  --color-texto-negro-075: rgba(0, 0, 0, 0.75);
+  --color-texto-negro-1: rgba(0, 0, 0, 1);
+  --color-principal: rgba(0, 0, 77, 0.949);
+  --color-principal-hover: rgba(2, 2, 122, 0.95);
+  --color-secundario: rgba(72, 100, 177, 0.95);
+  --color-secundario-hover: rgba(62, 105, 223, 0.95);
+  --color-terciario: rgba(140, 192, 222, 0.95);
+
+  --color-luna: rgba(255, 255, 172, 0.9);
+  --color-luna-hover: rgba(255, 255, 0, 0.9);
+  --color-sol: rgba(255, 255, 0, 0.8);
+  --color-sol-hover: rgba(255, 255, 0, 0.9);
+
+  --color-texto-buscador: rgba(0, 0, 0, 0.75);
+  --color-texto-registro: var(--color-principal);
+
+  --degradado-btn-eliminar: linear-gradient(to right, rgba(255, 0, 0, 0.9), rgba(187, 30, 22, 0.9), rgba(219, 25, 25, 0.9), rgba(233, 58, 31, 0.9));
+  --degradado-btn-actualizar: linear-gradient(to right, rgba(30, 255, 0, 0.9), rgba(88, 187, 22, 0.9), rgba(25, 219, 35, 0.9), rgba(31, 233, 75, 0.9));
+  --degradado-btn-historia: linear-gradient(to right, rgba(98, 95, 240, 0.8), rgba(98, 86, 163, 0.9), rgba(98, 86, 163, 0.9), rgba(98, 95, 240, 0.8));
+
+  --fuente-global: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --fuente-logotipo: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+/*-----------------------Estilos modo oscuro-----------------------*/
+:root[data-theme="dark"] {
+  color: rgba(235, 239, 247, 0.9);
+
+  --bg-body: rgba(12, 20, 47, 1);
+  --bg-body-darker: rgba(12, 20, 47, 0.5);
+  --bg-cabecera: rgba(8, 10, 20, 0.836);
+  --bg-menu: rgba(6, 8, 17, 0.9);
+
+  --bg-enlace-menu-hover: rgba(8, 10, 30, 0.904);
+  --bg-consulta-par: rgba(33, 48, 78, 0.9);
+  --bg-consulta-impar: rgba(31, 56, 107, 0.9);
+
+  --color-texto-blanco: rgba(235, 239, 247, 0.9);
+  --color-texto-negro-05: rgba(255, 255, 255, 0.5);
+  --color-texto-negro-075: rgba(255, 255, 255, 0.75);
+  --color-texto-negro-1: rgba(235, 239, 247, 0.9);
+  --color-principal: rgba(12, 114, 223, 0.95);
+  --color-principal-hover: rgba(16, 102, 194, 0.95);
+  --color-secundario: rgba(49, 78, 158, 0.95);
+  --color-secundario-hover: rgba(36, 66, 146, 0.95);
+  --color-terciario: rgba(129, 183, 214, 0.95);
+
+  --color-luna-hover: rgba(255, 255, 0, 0.9);
+  --color-sol: rgba(255, 255, 0, 0.8);
+  --color-sol-hover: rgba(255, 255, 0, 0.9);
+
+  --color-texto-buscador: rgba(0, 0, 0, 0.75);
+  --color-texto-registro: rgba(235, 239, 247, 0.9);
+
+  --degradado-btn-eliminar: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(187, 30, 22, 0.5), rgba(219, 25, 25, 0.6), rgba(233, 58, 31, 0.6));
+  --degradado-btn-actualizar: linear-gradient(to right, rgba(30, 255, 0, 0.5), rgba(88, 187, 22, 0.5), rgba(25, 219, 35, 0.6), rgba(31, 233, 75, 0.6));
+  --degradado-btn-historia: linear-gradient(to right, rgba(50, 48, 133, 1), rgb(31, 29, 155), rgba(54, 33, 173, 0.9), rgba(37, 35, 177, 0.9));
+}
